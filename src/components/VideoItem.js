@@ -11,6 +11,9 @@ const Wrapper = styled.div`
     .card-img-top {
       height: 200px;
     }
+    h6{
+        font-size: 0.8rem;
+    }
   }
 `
 
@@ -21,7 +24,7 @@ const VideoItems = ({data, setModal, isModal}) => {
       <div className="card" onClick={() => setModal(true)}>
         <img className="card-img-top" src={snippet.thumbnails.medium.url} alt={snippet.title}/>
         <div className="card-body">
-          {snippet.title}
+          <h6>{snippet.title}</h6>
         </div>
       </div>
       <VideoModal title={snippet.title} desc={snippet.description} videoId={id.videoId} isShow={isModal}
